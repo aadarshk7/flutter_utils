@@ -1,20 +1,34 @@
-<<<<<<< HEAD
-# flutter_utils
+# Flutter Utils
 
-A new Flutter project.
+Welcome to **Flutter Utils**! This repository contains a collection of utility code, examples, and snippets for Flutter basics. Whether you're just starting out with Flutter or looking for reusable code, this repository aims to provide a foundation for all Flutter-related tasks.
+
+## Table of Contents
+
+- [About](#about)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## About
+
+**Flutter Utils** is a repository that includes examples and utilities to help Flutter developers of all levels. This project covers the basics and general principles of Flutter development, offering code snippets, components, and features that are frequently used in many Flutter applications.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To get started with this repository, make sure you have Flutter installed on your local machine. If you haven't already, follow the [official Flutter installation guide](https://flutter.dev/docs/get-started/install).
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Flutter SDK](https://flutter.dev/docs/get-started/install)
+- [Dart](https://dart.dev/get-dart) (comes with Flutter)
+- A code editor like [Visual Studio Code](https://code.visualstudio.com/) or [Android Studio](https://developer.android.com/studio)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# flutter_utils
->>>>>>> f5741706f84308b90dd8e520ccdd260fbc8ef220
+### Installation
+
+1. Clone the repository:
+   
+   ```bash
+   git clone git@github.com:aadarshk7/flutter_utils.git
