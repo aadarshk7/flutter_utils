@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'general_flutter/fancy_hellowidget.dart';
+import 'general_flutter/3.animation_example.dart';
+import 'general_flutter/4.simple_selector_animation.dart';
+import 'general_flutter/2.fancy_hellowidget.dart';
 
 void main() {
   runApp((MyApp()));
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FancyHelloWidget(),
+      home: MyHomePage(),
     );
   }
 }
