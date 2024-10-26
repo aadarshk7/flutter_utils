@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: CombinedAnimationScreen(),
+    home: AnimatedCirclesScreen(),
   ));
 }
 
-class CombinedAnimationScreen extends StatefulWidget {
+class AnimatedCirclesScreen extends StatefulWidget {
   @override
-  _CombinedAnimationScreenState createState() =>
-      _CombinedAnimationScreenState();
+  _AnimatedCirclesScreenState createState() => _AnimatedCirclesScreenState();
 }
 
-class _CombinedAnimationScreenState extends State<CombinedAnimationScreen>
+class _AnimatedCirclesScreenState extends State<AnimatedCirclesScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
@@ -22,11 +20,10 @@ class _CombinedAnimationScreenState extends State<CombinedAnimationScreen>
   void initState() {
     super.initState();
 
-    // Initialize the AnimationController
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 4),
-    )..repeat(reverse: true); // Repeat animation
+      duration: const Duration(seconds: 3),
+    )..repeat(reverse: true);
   }
 
   @override
@@ -40,36 +37,23 @@ class _CombinedAnimationScreenState extends State<CombinedAnimationScreen>
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xFF00F260), Color(0xFF0575E6)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+          gradient: RadialGradient(
+            colors: [Color(0xFF4CAF50), Color(0xFF388E3C)],
+            // colors: [Color(0xFFFFAFBD), Color(0xFFFFC3A0)],
+            center: Alignment.center,
+            radius: 1.0,
           ),
         ),
         child: Center(
           child: AnimatedBuilder(
             animation: _controller,
             builder: (context, child) {
-              return Stack(
-                alignment: Alignment.center,
-                children: [
-                  // Custom paint for the expanding and contracting circles
-                  CustomPaint(
-                    painter: ExpandingCirclesPainter(_controller.value),
-                    child: const SizedBox(
-                      width: 300,
-                      height: 300,
-                    ),
-                  ),
-                  // Custom paint for the rotating square
-                  CustomPaint(
-                    painter: RotatingSquarePainter(_controller.value),
-                    child: SizedBox(
-                      width: 150,
-                      height: 150,
-                    ),
-                  ),
-                ],
+              return CustomPaint(
+                painter: ExpandingCirclesPainter(_controller.value),
+                child: SizedBox(
+                  width: 300,
+                  height: 300,
+                ),
               );
             },
           ),
@@ -98,41 +82,6 @@ class ExpandingCirclesPainter extends CustomPainter {
       final radius = (size.width / 10) * i * progress;
       canvas.drawCircle(center, radius, paint);
     }
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return true;
-  }
-}
-
-class RotatingSquarePainter extends CustomPainter {
-  final double progress;
-
-  RotatingSquarePainter(this.progress);
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..style = PaintingStyle.fill
-      ..shader = LinearGradient(
-        colors: [Colors.deepPurpleAccent, Colors.orangeAccent, Colors.pink],
-        stops: [0.3, 0.6, 1.0],
-      ).createShader(Rect.fromLTWH(0, 0, size.width, size.height));
-
-    final center = Offset(size.width / 2, size.height / 2);
-    final side = size.width / 2;
-
-    // Apply rotation transformation
-    canvas.save();
-    canvas.translate(center.dx, center.dy);
-    canvas.rotate(2 * pi * progress);
-    canvas.translate(-center.dx, -center.dy);
-
-    final rect = Rect.fromCenter(center: center, width: side, height: side);
-    canvas.drawRect(rect, paint);
-
-    canvas.restore();
   }
 
   @override
