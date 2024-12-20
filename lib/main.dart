@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'general_flutter/3.animation_example.dart';
-import 'general_flutter/4.simple_selector_animation.dart';
-import 'general_flutter/2.fancy_hellowidget.dart';
+import 'media_player/models/media_file.dart';
+import 'media_player/views/player_screen.dart';
 
 void main() {
-  runApp((MyApp()));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,11 +11,25 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Riverpod HTTP Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: ThemeData.dark(),
+      home: PlayerScreen(
+        mediaFiles: [
+          MediaFile(
+            title: "Video 1",
+            path: "assets/videos/video1.mp4",
+            isVideo: true,
+            url:
+                'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+          ),
+          MediaFile(
+            title: "Video 2",
+            path: "assets/videos/video2.mp4",
+            isVideo: true,
+            url:
+                'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+          ),
+        ],
       ),
-      home: MyHomePage(),
     );
   }
 }
