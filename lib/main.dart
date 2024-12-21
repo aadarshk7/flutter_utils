@@ -18,15 +18,13 @@ class MyApp extends StatelessWidget {
             title: "Video 1",
             path: "assets/videos/video1.mp4",
             isVideo: true,
-            url:
-                'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+            url: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
           ),
           MediaFile(
             title: "Video 2",
             path: "assets/videos/video2.mp4",
             isVideo: true,
-            url:
-                'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+            url: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
           ),
         ],
       ),
