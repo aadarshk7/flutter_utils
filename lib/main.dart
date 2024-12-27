@@ -3,7 +3,7 @@ import 'media_player/models/media_file.dart';
 import 'media_player/views/player_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,14 +17,14 @@ class MyApp extends StatelessWidget {
       home: PlayerScreen(
         mediaFiles: [
           MediaFile(
-            title: "Video 1",
-            path: "assets/videos/video1.mp4",
+            title: 'Video 1',
+            path: 'assets/videos/video1.mp4',
             isVideo: true,
             url: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
           ),
           MediaFile(
-            title: "Video 2",
-            path: "assets/videos/video2.mp4",
+            title: 'Video 2',
+            path: 'assets/videos/video2.mp4',
             isVideo: true,
             url: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
           ),

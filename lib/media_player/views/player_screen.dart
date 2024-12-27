@@ -7,7 +7,7 @@ import '../models/media_file.dart';
 class PlayerScreen extends StatelessWidget {
   final List<MediaFile> mediaFiles;
 
-  PlayerScreen({required this.mediaFiles});
+  const PlayerScreen({super.key, required this.mediaFiles});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class PlayerScreen extends StatelessWidget {
         backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Text('Media Player', style: TextStyle(color: Colors.white)),
+          title: const Text('Media Player', style: TextStyle(color: Colors.white)),
           centerTitle: true,
           elevation: 0,
         ),
@@ -36,32 +36,32 @@ class PlayerScreen extends StatelessWidget {
                         FlickVideoPlayer(flickManager: viewModel.flickManager!),
                   )
                 else
-                  CircularProgressIndicator(),
+                  const CircularProgressIndicator(),
                 const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     IconButton(
-                      icon: Icon(Icons.skip_previous, color: Colors.white),
+                      icon: const Icon(Icons.skip_previous, color: Colors.white),
                       onPressed: viewModel.previous,
                     ),
                     IconButton(
                       icon: Icon(
                           viewModel.isPlaying ? Icons.pause : Icons.play_arrow,
-                          color: Colors.white),
+                          color: Colors.white,),
                       onPressed: viewModel.isPlaying
                           ? viewModel.pause
                           : viewModel.play,
                     ),
                     IconButton(
-                      icon: Icon(Icons.skip_next, color: Colors.white),
+                      icon: const Icon(Icons.skip_next, color: Colors.white),
                       onPressed: viewModel.next,
                     ),
                   ],
                 ),
                 Text(
                   '${viewModel.position.inMinutes}:${(viewModel.position.inSeconds % 60).toString().padLeft(2, '0')} / ${viewModel.duration.inMinutes}:${(viewModel.duration.inSeconds % 60).toString().padLeft(2, '0')}',
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                 ),
               ],
             );

@@ -1,0 +1,64 @@
+import 'package:flutter/material.dart';
+
+class ColorManager {
+  static const Color _yellow = Color(0xFFFFCC1A);
+  static const Color _yellowDark = Color.fromARGB(255, 221, 178, 23);
+  static const Color _yellowLight = Color.fromARGB(255, 255, 224, 111);
+  static const Color _yellowLightTransparent = Color.fromARGB(128, 255, 224, 111);
+  static const Color _black = Color(0xFF2F2F2F);
+  static const Color _blackTransparent = Color(0xEE2F2F2F);
+  static const Color _blackTransparentLight = Color(0x112F2F2F);
+  static const Color _white = Color(0xffFFFFFF);
+  static const Color _offWhite = Color(0xffF9F9F9);
+  static const Color _offWhiteTransparent = Color(0x00F9F9F9);
+  static const Color _grey = Color(0xff1C1C1C);
+  static const Color _green = Color(0xFF54C18D);
+  static const Color _greenGrass = Color(0xFF73CD00);
+  static const Color _red = Color(0xffFF3838);
+  static const Color _fadedRed = Color(0xffFFB2B2);
+  static const Color _lightGrey = Color(0xff9d9d9d);
+  static const Color _lightGreyTransp = Color(0x889d9d9d);
+  static const Color _darkGrey = Color(0xff4A4A4A);
+  static const Color backgroundTransparent = _offWhiteTransparent;
+  static const Color backgroundCard = _offWhite;
+  static const Color greyText = _grey;
+  static const Color lightText = _lightGrey;
+  static const Color statusActive = _green;
+  static const Color green = _greenGrass;
+  static const Color statusInactive = _red;
+  static const Color notice = _fadedRed;
+  static const Color error = _red;
+  static const Color lightGreyBG = _lightGrey;
+  static const Color darkGreyBG = _darkGrey;
+  static const Color dividerColor = _lightGreyTransp;
+
+  static const Color purple = Colors.purple;
+  static const Color yellow = Colors.yellow;
+  static const Color primary = _yellow;
+  static const Color primaryDark = _yellowDark;
+  static const Color primaryLight = _yellowLight;
+  static const Color primaryLightTransparent = _yellowLightTransparent;
+  static const Color errorRed = _red;
+  static const Color foreground = _white;
+  static const Color background = _white;
+  static const Color scaffoldBackground = _white;
+  static const Color pureBlack = Color(0xFF000000);
+  static const Color black = _black;
+  static const Color white = _white;
+  static const Color blackTransparent = _blackTransparent;
+  static const Color grey = Color(0xFF9D9D9D);
+  static const Color darkGrey = Color(0xFF9D9D9D);
+  static const Color lightGrey = Color(0xFFF2F2F2);
+  static const Color indicatorGrey = Color(0xFFD9D9D9);
+  static const Color greyBorderColor = Color(0xFFB4B4B4);
+  static const Color labelColor = Color(0xFFA0A0A0);
+  static const Color lightLabelColor = Color(0xFFAFAFAF);
+  static const Color lightTextGrey = Color(0xFF2F2F2F);
+  static const Color lighterTextGrey = Color(0xFFB3B3B3);
+  static const Color textLightGrey = Color(0xFF9B9B9B);
+  static const Color shadowColor = Colors.black12;
+  static const Color shadowColorLight = _blackTransparentLight;
+
+  static const Color shimmerGrey = Color.fromARGB(255, 240, 238, 238);
+  static const Color midGrey = Color.fromARGB(255, 230, 229, 229);
+}

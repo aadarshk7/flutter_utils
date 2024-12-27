@@ -8,10 +8,12 @@ class AnimationsHomePage extends StatelessWidget {
     Item('Item 3', 'Description for Item 3', Icons.bookmark),
   ];
 
+  const AnimationsHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Animations Demo')),
+      appBar: AppBar(title: const Text('Animations Demo')),
       body: ListView.builder(
         itemCount: items.length,
         itemBuilder: (context, index) {
@@ -25,11 +27,11 @@ class AnimationsHomePage extends StatelessWidget {
                 leading: Icon(items[index].icon, color: Colors.blue),
                 title: Text(
                   items[index].title,
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 subtitle: Text(
                   items[index].description,
-                  style: TextStyle(color: Colors.grey),
+                  style: const TextStyle(color: Colors.grey),
                 ),
                 onTap: openContainer,
               );
@@ -44,7 +46,7 @@ class AnimationsHomePage extends StatelessWidget {
 class DetailsScreen extends StatelessWidget {
   final Item item;
 
-  DetailsScreen({required this.item});
+  const DetailsScreen({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +57,7 @@ class DetailsScreen extends StatelessWidget {
         children: [
           Container(
             alignment: Alignment.center,
-            margin: EdgeInsets.symmetric(vertical: 20),
+            margin: const EdgeInsets.symmetric(vertical: 20),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.network(
@@ -70,10 +72,10 @@ class DetailsScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
               item.description,
-              style: TextStyle(fontSize: 18, color: Colors.black87),
+              style: const TextStyle(fontSize: 18, color: Colors.black87),
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Align(
             alignment: Alignment.bottomRight,
             child: Padding(
@@ -88,8 +90,8 @@ class DetailsScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(
                     vertical: 10,
                     horizontal: 20,
                   ),
