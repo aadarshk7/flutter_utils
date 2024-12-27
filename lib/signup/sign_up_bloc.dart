@@ -1,13 +1,10 @@
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'sign_up_bloc.freezed.dart';
 part 'sign_up_event.dart';
 part 'sign_up_state.dart';
 
-class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
-  SignUpBloc() : super(SignUpInitial()) {
-    on<SignUpEvent>((event, emit) {
-      // TODO: implement event handler
-    });
-  }
+class SignUpBloc extends Bloc<SignUpEvent, SignupState> {
+  SignUpBloc() : super((const SignupState.initial()));
 }
