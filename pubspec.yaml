@@ -76,6 +76,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/paypal_ui/images/
     - assets/videos/video1.mp4
     - assets/videos/video2.mp4
     - assets/videos/video3.mp4
