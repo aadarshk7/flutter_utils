@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:animations/animations.dart';
+import 'package:flutter/material.dart';
 
 class AnimationsHomePage extends StatelessWidget {
   final List<Item> items = [
@@ -8,7 +8,7 @@ class AnimationsHomePage extends StatelessWidget {
     Item('Item 3', 'Description for Item 3', Icons.bookmark),
   ];
 
-  const AnimationsHomePage({super.key});
+  AnimationsHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
