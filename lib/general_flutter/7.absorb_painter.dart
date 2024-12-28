@@ -3,11 +3,13 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-      debugShowCheckedModeBanner: false, home: AbsorbPointerExample()));
+  runApp(const MaterialApp(
+      debugShowCheckedModeBanner: false, home: AbsorbPointerExample(),),);
 }
 
 class AbsorbPointerExample extends StatefulWidget {
+  const AbsorbPointerExample({super.key});
+
   @override
   _AbsorbPointerExampleState createState() => _AbsorbPointerExampleState();
 }
@@ -75,7 +77,7 @@ class _AbsorbPointerExampleState extends State<AbsorbPointerExample> {
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 32, vertical: 12),
+                                horizontal: 32, vertical: 12,),
                             backgroundColor: isInteractionEnabled
                                 ? Colors.teal
                                 : Colors.grey.withOpacity(0.5),

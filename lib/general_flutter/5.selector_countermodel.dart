@@ -22,21 +22,25 @@ void main() {
     // Wrap the app with ChangeNotifierProvider
     ChangeNotifierProvider(
       create: (context) => CounterModel(),
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: CounterScreen(),
     );
   }
 }
 
 class CounterScreen extends StatelessWidget {
+  const CounterScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: AnimatedCirclesScreen(),
-  ));
+  ),);
 }
 
 class AnimatedCirclesScreen extends StatefulWidget {
+  const AnimatedCirclesScreen({super.key});
+
   @override
   _AnimatedCirclesScreenState createState() => _AnimatedCirclesScreenState();
 }
@@ -50,7 +52,7 @@ class _AnimatedCirclesScreenState extends State<AnimatedCirclesScreen>
             builder: (context, child) {
               return CustomPaint(
                 painter: ExpandingCirclesPainter(_controller.value),
-                child: SizedBox(
+                child: const SizedBox(
                   width: 300,
                   height: 300,
                 ),
