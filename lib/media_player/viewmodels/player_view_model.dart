@@ -21,6 +21,7 @@ class PlayerViewModel extends ChangeNotifier {
   void loadMedia(MediaFile mediaFile) async {
     if (mediaFile.isVideo) {
       final directory = await getApplicationDocumentsDirectory();
+      // ignore: unused_local_variable
       final filePath = '${directory.path}/${mediaFile.path}';
       flickManager = FlickManager(
         videoPlayerController: VideoPlayerController.network(mediaFile.url),
