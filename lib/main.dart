@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'media_player/models/media_file.dart';
 import 'media_player/views/player_screen.dart';
 
@@ -27,6 +28,12 @@ class MyApp extends StatelessWidget {
             path: 'assets/videos/video2.mp4',
             isVideo: true,
             url: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+          ),
+          MediaFile(
+            title: 'Video 3',
+            url: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+            isVideo: true,
+            path: 'assets/videos/video3.mp4',
           ),
         ],
       ),
