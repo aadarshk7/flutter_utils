@@ -1,6 +1,6 @@
 ## Flutter Utils
 
-Welcome to **Flutter Utils**! This repository contains a collection of utility code, examples, and snippets for Flutter basics. Whether you're just starting out with Flutter or looking for reusable code, this repository aims to provide a foundation for all Flutter-related tasks.
+Welcome to **Flutter Utils**! This repository contains a collection of utility code, examples, and snippets for Flutter basics. Whether you're just starting out with Flutter or looking for reusable code, this repository aims to provide a foundation for all Flutter-related tasks
 
 ## Table of Contents
 
