@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
             url: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
           ),
           MediaFile(
-            title: 'Video 3',
+            title: 'Video Three',
             url: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
             isVideo: true,
             path: 'assets/videos/video3.mp4',
