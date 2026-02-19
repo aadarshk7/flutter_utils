@@ -14,7 +14,7 @@ Welcome to **Flutter Utils**! This repository contains a collection of utility c
 
 ## About
 
-**Flutter Utils** is a repository that includes examples and utilities to help Flutter developers of all levels. This project covers the basics and general principles of Flutter development, offering code snippets, components, and features that are frequently used in many Flutter applications.
+**Flutter Utils** is a repository that includes examples and utilities to help Flutter developers of all levels. This project covers the basics and general principles of Flutter development, offering code snippets, components, and features that are frequently used in many Flutter application.
 
 ## Getting Started
 
